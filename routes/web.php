@@ -22,4 +22,8 @@ Route::get('/', [AdministracionController::class,'Index']);
 Route::get('libros', [LibrosController::class,'Libros']);
 
 //Editorial
-Route::get('editorial', [EditorialController::class,'Editorial']);
+Route::get('editorial', [EditorialController::class,'Editorial'])->name('listado');
+Route::get('editorial/registrar', [EditorialController::class,'RegistroForm'])->name('form_registro');
+Route::get('editorial/registrar', [EditorialController::class,'Registro'])->name('registrar');
+Route::get('editorial/actualizar', [EditorialController::class,'ActualizarForm']);
+Route::get('editorial/actualizar', [EditorialController::class,'Actualizar']);
